@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업무지식 지원 챗봇</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0046ff;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #upload-form, #chat {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input[type="file"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        button {
+            background-color: #0046ff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button:hover {
+            background-color: #003ad1;
+            transform: translateY(-2px);
+        }
+        #answer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-height: 100px;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-robot icon"></i>업무지식 지원 챗봇</h1>
+        <p style="text-align: center; margin-bottom: 20px;">2024 KAIST AIDX 3팀 <i class="fas fa-star" style="color: #FFD700;"></i></p>
+        <div id="upload-form">
+            <form enctype="multipart/form-data">
+                <input type="file" name="file" accept=".pdf">
+                <button type="submit"><i class="fas fa-file-upload icon"></i>PDF 업로드</button>
+            </form>
+        </div>
+        <div id="chat">
+            <input type="text" id="question" placeholder="질문을 입력해주세요...">
+            <button onclick="askQuestion()"><i class="fas fa-question-circle icon"></i>질문하기</button>
+        </div>
+        <div id="answer"></div>
+    </div>
+
+    <script>
+        // 기존 JavaScript 코드는 그대로 유지
+    </script>
+</body>
+</html>
